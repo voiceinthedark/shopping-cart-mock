@@ -1,13 +1,14 @@
 {
   "name": "shoppingcart",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.06",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "dependencies": {
     "react": "^19.1.1",
