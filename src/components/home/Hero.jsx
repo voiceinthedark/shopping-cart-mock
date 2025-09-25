@@ -1,10 +1,13 @@
+import './hero.scss'
 import BackgroundImage from './BackgroundImage'
+import Welcome from './Welcome'
 
 const Hero = () => {
   return (
-    <main>
+    <section className='hero'>
       <BackgroundImage />
-    </main>
+      <Welcome />
+    </section>
   )
 }
 

@@ -1,0 +1,61 @@
+$font-color: #fff;
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  place-content: center;
+  width: inherit;
+  height: inherit;
+
+  .title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 30%;
+    text-align: center;
+    background-color: oklab(2% 0.1 0.1 / 0.2);
+
+    h1 {
+      color: $font-color;
+      font-size: 380%;
+    }
+  }
+
+  .intro {
+    display: flex;
+    align-self: center;
+    gap: 12px;
+    margin-top: 25px;
+    font-size: 170%;
+
+    background-color: oklab(2% 0.1 0.1 / 0.2);
+    padding: 24px 12px;
+    border-radius: 8px;
+
+    .intro-desc {
+      color: $font-color;
+    }
+  }
+}
+
+@media (width<=768px) {
+  .welcome {
+    .title {
+      background-color: oklab(2% 0.1 0.1 / 0.2);
+      padding: 4px 4px;
+      width: 50%;
+
+      h1 {
+        font-size: 180%;
+      }
+    }
+
+    .intro {
+      place-content: center;
+      font-size: 110%;
+      width: 80%;
+
+    }
+  }
+}

@@ -8,10 +8,9 @@ const Home = () => {
   // TODO: add footer
 
   return (
-    <>
+    <main className="home">
       <Hero />
-      <Welcome />
-    </>
+    </main>
   )
 
 }
