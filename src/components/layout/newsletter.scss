@@ -1,0 +1,9 @@
+.newsletter {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 22rem;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  color: #fff;
+  font-size: 110%;
+}

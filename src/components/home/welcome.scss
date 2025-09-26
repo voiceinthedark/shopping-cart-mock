@@ -1,4 +1,12 @@
 $font-color: #fff;
+$border-radius: 8px;
+$card-bg: oklab(2% 0.1 0.1 / 0.2);
+$button-bg: oklab(47% -0.4343 -0.2331);
+$button-bg-light: oklab(61% -0.4343 -0.3331);
+
+a {
+  text-decoration: none;
+}
 
 .welcome {
   display: flex;
@@ -14,7 +22,7 @@ $font-color: #fff;
     left: 10%;
     width: 30%;
     text-align: center;
-    background-color: oklab(2% 0.1 0.1 / 0.2);
+    background-color: $card-bg;
 
     h1 {
       color: $font-color;
@@ -29,12 +37,33 @@ $font-color: #fff;
     margin-top: 25px;
     font-size: 170%;
 
-    background-color: oklab(2% 0.1 0.1 / 0.2);
+    background-color: $card-bg;
     padding: 24px 12px;
-    border-radius: 8px;
+    border-radius: $border-radius;
+
+    .shop-btn {
+      flex: 1 0 auto;
+      display: flex;
+      place-items: center;
+      align-self: center;
+      appearance: none;
+      outline: none;
+      background-color: $button-bg;
+      color: $font-color;
+      border: none;
+      border-radius: $border-radius;
+      padding: 5px;
+      font-weight: 600;
+
+      &:hover {
+        background-color: $button-bg-light;
+        cursor: pointer;
+      }
+    }
 
     .intro-desc {
       color: $font-color;
+      text-align: end;
     }
   }
 }
@@ -42,9 +71,8 @@ $font-color: #fff;
 @media (width<=768px) {
   .welcome {
     .title {
-      background-color: oklab(2% 0.1 0.1 / 0.2);
       padding: 4px 4px;
-      width: 50%;
+      width: 55%;
 
       h1 {
         font-size: 180%;
@@ -55,7 +83,6 @@ $font-color: #fff;
       place-content: center;
       font-size: 110%;
       width: 80%;
-
     }
   }
 }
