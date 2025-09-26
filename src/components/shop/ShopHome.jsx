@@ -1,6 +1,7 @@
 import { useLoaderData } from 'react-router'
 import './shophome.scss'
 import { useEffect, useState } from 'react'
+import ProductList from '../products/ProductList'
 
 const ShopHome = () => {
   const { products } = useLoaderData()
@@ -13,7 +14,7 @@ const ShopHome = () => {
   // TODO: MAIN shop section
   return (
     <section className="shophome">
-      SHOP
+      <ProductList />
     </section>
   )
 }

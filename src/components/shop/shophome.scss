@@ -2,5 +2,9 @@
 
 .shophome {
   min-height: 42rem;
+  width: inherit;
   padding: b.$document-padding;
+  display: flex;
+  justify-content: center;
+  place-items: center;
 }
