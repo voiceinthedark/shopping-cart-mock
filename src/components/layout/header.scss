@@ -1,3 +1,5 @@
+@use '../../styles/base' as b;
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -6,6 +8,7 @@
   height: 7rem;
   background-color: rgba(10, 10, 10, 0.88);
   color: #fff;
+  padding: b.$document-padding;
 
   .navbar {
     .menu {

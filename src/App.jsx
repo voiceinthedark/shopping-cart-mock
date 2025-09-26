@@ -6,6 +6,14 @@ import MainLayout from './components/layout/MainLayout'
 
 function App() {
 
+  const productsLoader = async () => {
+    const response = await fetch('https://dummyjson.com/products')
+    const products = await response.json()
+
+    return { products }
+
+  }
+
   const routes = createBrowserRouter([
     {
       path: '/',
@@ -14,7 +22,12 @@ function App() {
     {
       element: <MainLayout />,
       children: [
-        { index: true, path: 'shop', element: <ShopHome /> }
+        {
+          index: true,
+          path: 'shop',
+          element: <ShopHome />,
+          loader: productsLoader,
+        }
       ],
     }
   ])

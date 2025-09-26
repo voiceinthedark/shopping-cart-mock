@@ -1,3 +1,6 @@
-.shophome{
+@use '../../styles/base' as b;
+
+.shophome {
   min-height: 42rem;
+  padding: b.$document-padding;
 }

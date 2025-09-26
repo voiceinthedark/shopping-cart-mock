@@ -5,7 +5,6 @@ import NewsLetter from "./Newsletter"
 import Footer from "./Footer"
 
 const MainLayout = () => {
-  // TODO: Header, newsletter and footer
   return (
     <section className="shop-layout">
       <Header />
