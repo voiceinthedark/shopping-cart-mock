@@ -8,9 +8,8 @@ const CategoryList = () => {
   return (
     <section className="category-list">
       {categories.map(c => {
-        return <CategoryCard category={c} />
+        return <CategoryCard key={c} category={c} />
       })}
-      
     </section>
   )
 }

@@ -2,11 +2,18 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  row-gap: 42px;
 }
 
 @media (width <=768px) {
   .product-list {
     grid-template-columns: 1fr;
     gap: 4px;
+  }
+}
+
+@media (width <= 1024px) and (orientation: landscape){
+  .product-list{
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -5,16 +5,15 @@ import ProductList from '../products/ProductList'
 
 const ShopHome = () => {
   const { products } = useLoaderData()
-  const [prods, setProds] = useState(null)
+  const [prods, setProds] = useState([])
 
   useEffect(() => {
-    setProds(products)
+    setProds(products.products)
   }, [])
 
-  // TODO: MAIN shop section
   return (
     <section className="shophome">
-      <ProductList />
+      <ProductList data={prods} />
     </section>
   )
 }

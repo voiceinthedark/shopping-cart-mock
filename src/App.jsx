@@ -6,6 +6,7 @@ import MainLayout from './components/layout/MainLayout'
 import { useState } from 'react'
 import ErrorPage from './components/error/ErrorPage'
 import CategoryHome from './components/categories/CategoryHome'
+import { element } from 'prop-types'
 
 function App() {
   const [isLoading, setIsloading] = useState(true)
@@ -57,6 +58,11 @@ function App() {
           path: 'shop',
           element: <ShopHome />,
           loader: productsLoader,
+
+        },
+        {
+          path: 'shop/:category',
+          element: <div>Cat</div>
         },
         {
           path: 'categories',

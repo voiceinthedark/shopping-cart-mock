@@ -1,19 +1,13 @@
 import ProductCard from "./ProductCard"
 import './product-list.scss'
 
-const ProductList = () => {
+const ProductList = ({ data }) => {
+
   return (
     <section className="product-list">
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
+      {data.map(d => {
+        return <ProductCard key={d.id} product={d} />
+      })}
     </section>
   )
 }

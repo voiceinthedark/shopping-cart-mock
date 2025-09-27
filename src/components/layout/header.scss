@@ -24,6 +24,11 @@
 
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 @media (width <=768px) {
   .header {
     flex-direction: column;
