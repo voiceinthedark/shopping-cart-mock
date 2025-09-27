@@ -6,7 +6,6 @@ const CategoryHome = () => {
     <section className="category-home">
       <h1>Categories</h1>
       <CategoryList />
-
     </section>
   )
 }

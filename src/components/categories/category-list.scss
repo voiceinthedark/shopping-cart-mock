@@ -8,6 +8,16 @@
 
 }
 
+@media (width <=1024px) and (orientation: landscape) {
+  .category-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+    place-items: start;
+
+  }
+}
+
 @media (width <=768px) {
   .category-list {
     display: flex;
