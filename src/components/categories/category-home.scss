@@ -1,0 +1,15 @@
+.category-home{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  min-height: 48rem;
+  height: auto;
+  width: inherit;
+  padding: 12px 24px;
+  margin-bottom: 8rem;
+  
+  h1{
+    align-self: flex-start;
+    margin-left: 12%;
+  }
+}

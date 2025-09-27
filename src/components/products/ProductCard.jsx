@@ -2,7 +2,10 @@ import './product-card.scss'
 const ProductCard = () => {
   return (
     <div className="product-card">
-      <img className="product-image" src="https://placehold.co/180x320" alt="image" />
+      <img
+        className="product-image"
+        src="https://placehold.co/180x320"
+        alt="image" />
       <div className="product-info">
         <div className="product-title">
           <h3>product title</h3>

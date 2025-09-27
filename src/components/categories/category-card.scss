@@ -1,0 +1,45 @@
+.category-card {
+  display: flex;
+  width: 18rem;
+  min-height: 38rem;
+  position: relative;
+  transition: transform 0.4s ease-in-out;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    border-radius: 1rem;
+  }
+
+  .category-title {
+    width: 100%;
+    bottom: 25%;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    height: 120px;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+
+    h2 {
+      color: #fff;
+      text-overflow: clip;
+      width: 100%;
+      text-align: center;
+      font-weight: 800;
+      font-size: 200%;
+      text-shadow: 1px 1px 3px black;
+      text-transform: uppercase;
+    }
+  }
+
+
+}
+
+.category-card:hover {
+  transform: scale(1.1) translate(2px);
+  cursor: pointer;
+}
