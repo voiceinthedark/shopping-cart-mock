@@ -6,6 +6,7 @@ import MainLayout from './components/layout/MainLayout'
 import { useState } from 'react'
 import ErrorPage from './components/error/ErrorPage'
 import CategoryHome from './components/categories/CategoryHome'
+import Category from './components/categories/Category'
 
 function App() {
   const [isLoading, setIsloading] = useState(true)
@@ -51,6 +52,8 @@ function App() {
     },
     {
       element: <MainLayout />,
+      loader: productsLoader,
+      errorElement: <ErrorPage />,
       children: [
         {
           index: true,
@@ -60,16 +63,19 @@ function App() {
 
         },
         {
-          path: 'shop/:category',
-          element: <div>Cat</div>
-        },
-        {
           path: 'categories',
           element: <CategoryHome />,
           loader: categoriesLoader,
-        }
+        },
+        {
+          path: 'categories/:category',
+          element: <Category />,
+          loader: productsLoader,
+        },
+
+
+
       ],
-      errorElement: <ErrorPage />
     }
   ])
 

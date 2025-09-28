@@ -1,0 +1,13 @@
+.category{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+
+  .title{
+    align-self: flex-start;
+    margin-left: 17%;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+}
