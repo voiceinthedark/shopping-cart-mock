@@ -12,6 +12,14 @@ function App() {
   const [isLoading, setIsloading] = useState(true)
   const [error, setError] = useState(null)
 
+  const productsByCategoryLoader = async (category) => {
+    const response =
+      await fetch(`https://dummyjson.com/products/category/${category}`)
+    const products = await response.json()
+
+    return { products }
+  }
+
   const productsLoader = async () => {
     try {
       const response = await fetch('https://dummyjson.com/products')
@@ -70,7 +78,6 @@ function App() {
         {
           path: 'categories/:category',
           element: <Category />,
-          loader: productsLoader,
         },
 
 
