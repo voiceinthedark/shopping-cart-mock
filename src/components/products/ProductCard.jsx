@@ -1,4 +1,5 @@
 import Tag from '../ui/Tag'
+import { Star } from 'lucide-react'
 import './product-card.scss'
 import PropTypes from 'prop-types'
 
@@ -18,12 +19,15 @@ const ProductCard = ({ product }) => {
         </div>
         <div className="product-price">
           <div className='price'>${product.price}</div>
-          <div className='rating'>{product.rating}</div>
+          <div className='rating'>
+            <span>{product.rating}</span>
+            <i><Star size={18} fill='gold' /></i>
+          </div>
         </div>
       </div>
       <ul className="product-tags">
         {product.tags.map(tag => {
-          return <Tag tag={tag} />
+          return <Tag key={tag} tag={tag} />
         })}
       </ul>
     </div>

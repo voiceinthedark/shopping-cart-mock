@@ -1,3 +1,20 @@
 // _base.scss
+@use 'sass:math';
+@use 'sass:string';
 
 $document-padding: 12px 12px;
+
+@function getRandomColor() {
+  $letters: '0123456789ABCDEF';
+  $color: '#';
+  @for $i from 1 through 6 {
+    $index: random(16) - 1;
+    $color: $color + str-slice($letters, $index + 1, $index + 1);
+  }
+  @return unquote($color);
+}
+
+@function getRandomNb(){
+  @return math.random(255);
+}
+

@@ -1,5 +1,12 @@
+@use '../../styles/base' as b;
+
 .tag{
-  background-color: goldenrod;
+  // background-color: rgb($red: b.getRandomNb(), $green: b.getRandomNb(), $blue: b.getRandomNb());
+  // background-color: b.getRandomColor();
+  background-color: #ce9382;
   padding: 1px 3px;
   border-radius: 4px;
+  color: #fff;
+  text-align: center;
 }
+

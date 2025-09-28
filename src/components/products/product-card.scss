@@ -9,7 +9,7 @@
   border-radius: 4px;
   box-shadow: 2px -2px 4px 4px rgba($color: #000000, $alpha: 0.2);
   transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 
 
   .product-image {
@@ -24,6 +24,7 @@
     display: flex;
     justify-content: space-between;
     padding: 2px 4px;
+    align-items: center;
 
     .product-title,
     .product-price {
@@ -47,13 +48,25 @@
         top: 0;
         right: 0;
       }
+
+      .rating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+
+        i {
+          flex: 1 0 100%;
+        }
+      }
     }
   }
 
-  .product-tags{
+  .product-tags {
     display: flex;
     list-style: none;
     gap: 4px;
+    margin-top: 22px;
   }
 }
 

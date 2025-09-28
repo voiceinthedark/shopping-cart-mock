@@ -6,7 +6,6 @@ import MainLayout from './components/layout/MainLayout'
 import { useState } from 'react'
 import ErrorPage from './components/error/ErrorPage'
 import CategoryHome from './components/categories/CategoryHome'
-import { element } from 'prop-types'
 
 function App() {
   const [isLoading, setIsloading] = useState(true)
