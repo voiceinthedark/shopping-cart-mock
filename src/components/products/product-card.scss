@@ -62,23 +62,23 @@
     }
   }
 
-  .product-amount{
+  .product-amount {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    button{
+    button {
       appearance: none;
       outline: none;
       background: none;
       border: 1px solid #000;
-      
-      &:hover{
+
+      &:hover {
         cursor: pointer;
       }
     }
 
-    #amount{
+    #amount {
       text-align: center;
       appearance: none;
       border: none;
@@ -101,11 +101,15 @@
       gap: 4px;
     }
 
-    .cart-btn{
+    .cart-btn {
       appearance: none;
       outline: none;
       background: none;
       border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 

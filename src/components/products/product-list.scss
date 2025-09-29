@@ -1,8 +1,11 @@
+@use '../../styles/base' as b;
+
 .product-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   row-gap: 42px;
+  margin-top: b.$main-margin-top;
 }
 
 @media (width <=768px) {

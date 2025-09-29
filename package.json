@@ -1,7 +1,7 @@
 {
   "name": "shoppingcart",
   "private": true,
-  "version": "0.03.73",
+  "version": "0.03.87",
   "type": "module",
   "scripts": {
     "dev": "vite",

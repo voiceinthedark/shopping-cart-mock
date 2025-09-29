@@ -1,3 +1,5 @@
+@use '../../styles/base' as b;
+
 .category-home{
   display: flex;
   flex-direction: column;
@@ -7,6 +9,7 @@
   width: inherit;
   padding: 12px 24px;
   margin-bottom: 8rem;
+  margin-top: b.$main-margin-top;
   
   h1{
     align-self: flex-start;

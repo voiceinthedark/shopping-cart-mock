@@ -1,6 +1,7 @@
 @use '../../styles/base' as b;
 
 .shophome {
+  // margin-top: b.$main-margin-top;
   min-height: 42rem;
   width: inherit;
   padding: b.$document-padding;

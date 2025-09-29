@@ -1,7 +1,9 @@
+@use '../../styles/base' as b;
 .category{
   display: flex;
   flex-direction: column;
   place-items: center;
+  margin-top: b.$main-margin-top;
 
   .back-btn{
     text-decoration: none;

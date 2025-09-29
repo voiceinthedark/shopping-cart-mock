@@ -9,8 +9,6 @@ import Category from './components/categories/Category'
 
 function App() {
 
-  
-
   const productsLoader = async () => {
     try {
       const response = await fetch('https://dummyjson.com/products')
@@ -51,7 +49,6 @@ function App() {
       path: '/',
       element: <Home />,
       errorElement: <ErrorPage />
-      
     },
     {
       element: <MainLayout />,
@@ -74,9 +71,6 @@ function App() {
           path: 'categories/:category',
           element: <Category />,
         },
-
-
-
       ],
     }
   ])

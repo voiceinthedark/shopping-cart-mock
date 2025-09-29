@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 
 $document-padding: 12px 12px;
+$main-margin-top: 8rem;
 
 @function getRandomColor() {
   $letters: '0123456789ABCDEF';

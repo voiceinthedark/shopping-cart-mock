@@ -2,7 +2,7 @@ import Tag from '../ui/Tag'
 import { Minus, Plus, ShoppingCart, Star } from 'lucide-react'
 import './product-card.scss'
 import PropTypes from 'prop-types'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { useOutletContext } from 'react-router'
 
 const ProductCard = ({ product }) => {
@@ -11,16 +11,15 @@ const ProductCard = ({ product }) => {
   const [inCart, setInCart] = useState(false)
 
   const handleCartClick = () => {
-    if (cart.findIndex((p) => p.id === product.id) === -1) {
+    if (cart.findIndex((p) => p.id === product.id) === -1 && amount !== 0) {
       setCart([...cart, { id: product.id, product: product, amount: amount }])
       setInCart(true)
     }
-    else {
+    else if(cart.findIndex((p) => p.id === product.id) >= 0) {
       setCart(() => {
         return cart.filter(p => p.id !== product.id)
       })
       setInCart(false)
-
     }
   }
 
