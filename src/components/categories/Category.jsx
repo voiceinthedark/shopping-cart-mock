@@ -1,4 +1,4 @@
-import { useParams } from "react-router"
+import { Link, useParams } from "react-router"
 import ProductList from "../products/ProductList"
 import { useEffect, useState } from "react"
 import './category.scss'
@@ -35,6 +35,7 @@ const Category = () => {
 
   return (
     <section className="category">
+      <Link className="back-btn" to={'/categories'} >Get Back</Link>
       <h1 className="title">{category}</h1>
       <ProductList data={data} />
     </section>

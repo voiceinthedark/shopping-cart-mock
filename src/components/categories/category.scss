@@ -3,6 +3,22 @@
   flex-direction: column;
   place-items: center;
 
+  .back-btn{
+    text-decoration: none;
+    color: #000;
+    align-self: flex-start;
+    font-size: 130%;
+    margin-left: 2%;
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: transparent;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
   .title{
     align-self: flex-start;
     margin-left: 17%;
