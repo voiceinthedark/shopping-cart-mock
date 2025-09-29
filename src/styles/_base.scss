@@ -2,19 +2,23 @@
 @use 'sass:math';
 @use 'sass:string';
 
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
 $document-padding: 12px 12px;
 
 @function getRandomColor() {
   $letters: '0123456789ABCDEF';
   $color: '#';
+
   @for $i from 1 through 6 {
     $index: random(16) - 1;
     $color: $color + str-slice($letters, $index + 1, $index + 1);
   }
+
   @return unquote($color);
 }
 
-@function getRandomNb(){
+@function getRandomNb() {
   @return math.random(255);
 }
-

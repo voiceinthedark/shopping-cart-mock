@@ -10,6 +10,12 @@
   color: #fff;
   padding: b.$document-padding;
 
+  h2{
+    font-family: 'Notable';
+    font-size: 190%;
+    font-weight: 900;
+  }
+
   .navbar {
     .menu {
       display: flex;
