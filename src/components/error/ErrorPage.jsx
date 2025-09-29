@@ -1,14 +1,23 @@
-import { useRouteError } from "react-router"
+import './error.scss'
+import { Link, useRouteError } from "react-router"
 
 const ErrorPage = () => {
   const error = useRouteError()
 
   if (error.status === 404) {
-    return <div>Page not found!</div>
+    return (
+      <div className="notfound">
+        <h1>Page not found!</h1>
+        <Link className='back-btn' to={'/shop'}><h2>Get back to shop</h2></Link>
+      </div>
+    )
   }
 
   return (
-    <div>Oops! An error occured while processing the request!</div>
+    <div className='error'>
+      Oops! An error occured while processing the request!
+      <Link className='back-btn' to={'/shop'}><h2>Get back to shop</h2></Link>
+    </div>
   )
 }
 

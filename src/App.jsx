@@ -9,8 +9,8 @@ import CategoryHome from './components/categories/CategoryHome'
 import Category from './components/categories/Category'
 
 function App() {
-  const [isLoading, setIsloading] = useState(true)
-  const [error, setError] = useState(null)
+  // const [isLoading, setIsloading] = useState(true)
+  // const [error, setError] = useState(null)
 
   const productsByCategoryLoader = async (category) => {
     const response =
@@ -24,15 +24,16 @@ function App() {
     try {
       const response = await fetch('https://dummyjson.com/products')
       const products = await response.json()
-      setIsloading(false)
+      // setIsloading(false)
       return { products }
 
     } catch (error) {
-      setError(error)
-      setIsloading(false)
+      // setError(error)
+      // setIsloading(false)
+      throw error
 
     } finally {
-      setIsloading(false)
+      // setIsloading(false)
 
     }
   }
@@ -41,22 +42,25 @@ function App() {
     try {
       const response = await fetch('https://dummyjson.com/products/category-list')
       const categories = await response.json()
-      setIsloading(false)
+      // setIsloading(false)
       return { categories }
 
     } catch (error) {
-      setError(error)
-      setIsloading(false)
+      // setError(error)
+      // setIsloading(false)
+      throw error
     }
     finally {
-      setIsloading(false)
+      // setIsloading(false)
     }
   }
 
   const routes = createBrowserRouter([
     {
       path: '/',
-      element: <Home />
+      element: <Home />,
+      errorElement: <ErrorPage />
+      
     },
     {
       element: <MainLayout />,

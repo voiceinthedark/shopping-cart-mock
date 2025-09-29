@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import './category.scss'
 // import useSWR from "swr"
 
-const fetcher = (...args) => fetch(...args).then(res => res.json())
+const fetcher = (url) => fetch(url).then(res => res.json())
 
 const Category = () => {
   const [data, setData] = useState([])
@@ -12,7 +12,7 @@ const Category = () => {
   const [isLoading, setIsLoading] = useState(true)
   const { category } = useParams()
   // const { data, error, isLoading } =
-  // useSWR(`https://dummyjson.com/products/category/${category}`, fetcher)
+    // useSWR(`https://dummyjson.com/products/category/${category}`, fetcher)
 
   useEffect(() => {
     const fetchProducts = async () => {

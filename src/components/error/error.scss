@@ -1,0 +1,18 @@
+.error, .notfound{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+
+  .back-btn{
+    text-decoration: none;
+    color: #000;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+}

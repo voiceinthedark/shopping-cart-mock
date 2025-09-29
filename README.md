@@ -8,6 +8,8 @@ A Shopping cart mock made in react and react router.
 
 ## TODO
 
+- [ ] Make a product page
+
 
 
 ## Acknowledgments
