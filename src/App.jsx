@@ -3,22 +3,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import Home from './components/home/Home'
 import ShopHome from './components/shop/ShopHome'
 import MainLayout from './components/layout/MainLayout'
-import { useState } from 'react'
 import ErrorPage from './components/error/ErrorPage'
 import CategoryHome from './components/categories/CategoryHome'
 import Category from './components/categories/Category'
 
 function App() {
-  // const [isLoading, setIsloading] = useState(true)
-  // const [error, setError] = useState(null)
 
-  const productsByCategoryLoader = async (category) => {
-    const response =
-      await fetch(`https://dummyjson.com/products/category/${category}`)
-    const products = await response.json()
-
-    return { products }
-  }
+  
 
   const productsLoader = async () => {
     try {
