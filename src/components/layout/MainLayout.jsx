@@ -11,7 +11,7 @@ const MainLayout = () => {
 
   return (
     <section className="shop-layout">
-      <Header />
+      <Header cart={cart} />
       <Outlet context={{products, cart, setCart}} />
       <NewsLetter />
       <Footer />

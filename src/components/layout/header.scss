@@ -26,10 +26,10 @@
     .menu {
       display: flex;
       list-style: none;
-      gap: 24px;
+      gap: 50px;
 
       .menuitem {
-        font-size: 120%;
+        font-size: 160%;
       }
     }
   }
@@ -52,6 +52,9 @@ a {
 
     .navbar {
       width: inherit;
+      .menu {
+        gap: 20px
+      }
     }
   }
 }

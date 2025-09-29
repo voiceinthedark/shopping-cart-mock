@@ -1,9 +1,8 @@
 import { Link } from 'react-router'
 import './header.scss'
-import { ShoppingCart } from 'lucide-react'
 import CartWidget from '../ui/CartWidget'
 
-const Header = () => {
+const Header = ({cart}) => {
   return (
     <div className="header">
       <Link to={'/'}>
@@ -23,7 +22,7 @@ const Header = () => {
           </li>
           <li className="menuitem">About</li>
         </ul>
-        <CartWidget />
+        <CartWidget cart={cart} />
       </nav>
     </div >
   )
