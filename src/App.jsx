@@ -6,6 +6,7 @@ import MainLayout from './components/layout/MainLayout'
 import ErrorPage from './components/error/ErrorPage'
 import CategoryHome from './components/categories/CategoryHome'
 import Category from './components/categories/Category'
+import CartHome from './components/cart/CartHome'
 
 function App() {
 
@@ -71,6 +72,10 @@ function App() {
           path: 'categories/:category',
           element: <Category />,
         },
+        {
+          path: 'cart',
+          element: <CartHome />
+        }
       ],
     }
   ])
