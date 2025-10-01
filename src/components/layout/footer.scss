@@ -1,6 +1,16 @@
 .footer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
   min-height: 30rem;
-  place-items: center;
+  // place-items: center;
+  place-content: center;
+
+  .phone,
+  .location,
+  .contact {
+    flex: 1 0 0;
+
+  }
 }
