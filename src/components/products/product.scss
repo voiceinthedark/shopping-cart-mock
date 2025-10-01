@@ -8,6 +8,22 @@
   min-height: 42rem;
   margin-bottom: 14rem;
 
+  .back-btn {
+    text-decoration: none;
+    color: #000;
+    align-self: flex-start;
+    font-size: 130%;
+    margin-left: 2%;
+    padding: 4px 8px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: transparent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .product-title {
     display: flex;
     flex-flow: column wrap;
@@ -24,6 +40,7 @@
     }
 
   }
+
 
   .info {
     display: flex;

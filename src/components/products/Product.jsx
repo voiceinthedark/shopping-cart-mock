@@ -3,6 +3,7 @@ import './product.scss'
 import useSWR from "swr"
 import { Star } from "lucide-react"
 import ProductReview from "./ProductReview"
+import { Link, useNavigate } from "react-router"
 
 const fetcher = (url) => fetch(url).then(res => res.json())
 
@@ -10,11 +11,14 @@ const Product = () => {
   const { productId } = useParams()
   const { data, error, isLoading } = useSWR(`https://dummyjson.com/products/${productId}`, fetcher)
 
+  const navigate = useNavigate()
+
   if (error) throw error
   if (isLoading) return <div>Loading...</div>
 
   return (
     <section className="product">
+      <button className="back-btn" onClick={() => navigate(-1)}>Go Back</button>
       <div className="product-title">
         <h1 className="title">{data.title}</h1>
         <h2 className="brand">{data.brand}</h2>
