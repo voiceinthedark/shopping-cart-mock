@@ -1,0 +1,41 @@
+.review {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  gap: 12px;
+  padding: 5px 22px;
+
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    padding: 3px 5px;
+    color: #fff;
+  }
+
+  .review-comment {
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+
+    .rating {
+      display: flex;
+      gap: 5px;
+      place-items: center;
+    }
+
+    .comment {
+      font-size: 140%;
+      border-left: 2px solid black;
+      padding-left: 2%;
+
+    }
+  }
+}
+
+@media (width <=768px) {
+  .review {
+    width: 100vw;
+  }
+}

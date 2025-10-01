@@ -7,6 +7,7 @@ import ErrorPage from './components/error/ErrorPage'
 import CategoryHome from './components/categories/CategoryHome'
 import Category from './components/categories/Category'
 import CartHome from './components/cart/CartHome'
+import Product from './components/products/Product'
 
 function App() {
 
@@ -14,17 +15,12 @@ function App() {
     try {
       const response = await fetch('https://dummyjson.com/products')
       const products = await response.json()
-      // setIsloading(false)
       return { products }
 
     } catch (error) {
-      // setError(error)
-      // setIsloading(false)
       throw error
 
     } finally {
-      // setIsloading(false)
-
     }
   }
 
@@ -32,16 +28,12 @@ function App() {
     try {
       const response = await fetch('https://dummyjson.com/products/category-list')
       const categories = await response.json()
-      // setIsloading(false)
       return { categories }
 
     } catch (error) {
-      // setError(error)
-      // setIsloading(false)
       throw error
     }
     finally {
-      // setIsloading(false)
     }
   }
 
@@ -75,6 +67,10 @@ function App() {
         {
           path: 'cart',
           element: <CartHome />
+        },
+        {
+          path: 'product/:productId',
+          element: <Product />
         }
       ],
     }

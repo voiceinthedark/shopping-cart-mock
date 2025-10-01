@@ -12,11 +12,13 @@ A Shopping cart mock made in react and react router.
 
 ## Roadmap
 
+- [ ] Add Search functionality
+
 ## TODO
 
-- [ ] Make a product page
-- [ ] Make Cart page
-- [ ] Make Dynamic Cart Icon in header
+- [x] Make a product page
+- [x] Make Cart page
+- [x] Make Dynamic Cart Icon in header
 - [x] Products should have an add to cart button
 - [x] Products should have an indication of whether the item is in the cart
 - [x] Clicking a product cart icon should add to cart or remove from cart if the item is already in the cart

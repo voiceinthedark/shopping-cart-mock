@@ -3,7 +3,7 @@ import { Minus, Plus, ShoppingCart, Star } from 'lucide-react'
 import './product-card.scss'
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
-import { useOutletContext } from 'react-router'
+import { Link, useOutletContext } from 'react-router'
 
 const ProductCard = ({ product }) => {
   const { cart, setCart } = useOutletContext()
@@ -52,58 +52,60 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="product-card">
-      <img
-        className="product-image"
-        // src="https://placehold.co/180x320"
-        src={product.images[0]}
-        alt="image" />
-      <div className="product-info">
-        <div className="product-title">
-          <h3 className='title'>{product.title}</h3>
-          <h4 className='brand'>{product.brand}</h4>
-        </div>
-        <div className="product-price">
-          <div className='price'>${product.price}</div>
-          <div className='rating'>
-            <span>{product.rating}</span>
-            <i><Star size={18} fill='gold' /></i>
+    <Link to={`/product/${product.id}`}>
+      <div className="product-card">
+        <img
+          className="product-image"
+          // src="https://placehold.co/180x320"
+          src={product.images[0]}
+          alt="image" />
+        <div className="product-info">
+          <div className="product-title">
+            <h3 className='title'>{product.title}</h3>
+            <h4 className='brand'>{product.brand}</h4>
+          </div>
+          <div className="product-price">
+            <div className='price'>${product.price}</div>
+            <div className='rating'>
+              <span>{product.rating}</span>
+              <i><Star size={18} fill='gold' /></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div className='product-amount'>
-        <button onClick={() => handleAmountChange(amount - 1)}>
-          <Minus size={24} />
-        </button>
-        <input
-          type="number"
-          name="amount"
-          id="amount"
-          onChange={(e) => handleAmountChange(+e.target.value)}
-          value={amount}
-          min={0} />
-        <button onClick={() => handleAmountChange(amount + 1)}><Plus size={24} /></button>
+        <div className='product-amount'>
+          <button onClick={() => handleAmountChange(amount - 1)}>
+            <Minus size={24} />
+          </button>
+          <input
+            type="number"
+            name="amount"
+            id="amount"
+            onChange={(e) => handleAmountChange(+e.target.value)}
+            value={amount}
+            min={0} />
+          <button onClick={() => handleAmountChange(amount + 1)}><Plus size={24} /></button>
 
+        </div>
+        <div className='product-options'>
+          <ul className="product-tags">
+            {product.tags.map(tag => {
+              return <Tag key={tag} tag={tag} />
+            })}
+          </ul>
+          <button
+            className='cart-btn'
+            onClick={handleCartClick}
+          >
+            <ShoppingCart size={32} fill={inCart ? 'black' : 'white'} />
+          </button>
+        </div>
       </div>
-      <div className='product-options'>
-        <ul className="product-tags">
-          {product.tags.map(tag => {
-            return <Tag key={tag} tag={tag} />
-          })}
-        </ul>
-        <button
-          className='cart-btn'
-          onClick={handleCartClick}
-        >
-          <ShoppingCart size={32} fill={inCart ? 'black' : 'white'} />
-        </button>
-      </div>
-    </div>
+    </Link>
   )
 }
 
 ProductCard.propTypes = {
-  product: PropTypes.shape({ 
+  product: PropTypes.shape({
     id: PropTypes.number.isRequired,
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
     title: PropTypes.string.isRequired,
