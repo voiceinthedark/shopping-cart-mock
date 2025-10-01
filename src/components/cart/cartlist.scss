@@ -1,5 +1,23 @@
-.cart-list{
+@use '../../styles/base' as b;
+
+.cart-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+}
+
+@media (width <=1024px) {
+  .cart-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (width <=768px) {
+  .cart-list {
+    margin-top: b.$main-margin-top;
+    display: flex;
+    flex-flow: column wrap-reverse;
+    align-items: center;
+  }
 }

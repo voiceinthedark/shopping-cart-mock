@@ -1,7 +1,14 @@
-.cart-home{
+.cart-home {
   display: grid;
   grid-template-columns: 4fr 1fr;
   width: 100%;
   min-height: 42rem;
   padding-left: 3%;
+}
+
+@media (width <=768px) {
+  .cart-home {
+    display: flex;
+    flex-flow: column wrap;
+  }
 }

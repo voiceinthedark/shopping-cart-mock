@@ -1,0 +1,23 @@
+.cart-info {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 80%;
+
+  .amount,
+  .items {
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+  }
+}
+
+@media (width <=768px) {
+  .cart-info {
+    width: 100%;
+    padding: 3px 10px;
+    margin-top: 1rem;
+    border: 1px solid black;
+  }
+
+}
