@@ -52,55 +52,56 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <Link to={`/product/${product.id}`}>
-      <div className="product-card">
+    <div className="product-card">
+
+      <Link to={`/product/${product.id}`}>
         <img
           className="product-image"
           // src="https://placehold.co/180x320"
           src={product.images[0]}
           alt="image" />
-        <div className="product-info">
-          <div className="product-title">
-            <h3 className='title'>{product.title}</h3>
-            <h4 className='brand'>{product.brand}</h4>
-          </div>
-          <div className="product-price">
-            <div className='price'>${product.price}</div>
-            <div className='rating'>
-              <span>{product.rating}</span>
-              <i><Star size={18} fill='gold' /></i>
-            </div>
-          </div>
+      </Link>
+      <div className="product-info">
+        <div className="product-title">
+          <h3 className='title'>{product.title}</h3>
+          <h4 className='brand'>{product.brand}</h4>
         </div>
-        <div className='product-amount'>
-          <button onClick={() => handleAmountChange(amount - 1)}>
-            <Minus size={24} />
-          </button>
-          <input
-            type="number"
-            name="amount"
-            id="amount"
-            onChange={(e) => handleAmountChange(+e.target.value)}
-            value={amount}
-            min={0} />
-          <button onClick={() => handleAmountChange(amount + 1)}><Plus size={24} /></button>
-
-        </div>
-        <div className='product-options'>
-          <ul className="product-tags">
-            {product.tags.map(tag => {
-              return <Tag key={tag} tag={tag} />
-            })}
-          </ul>
-          <button
-            className='cart-btn'
-            onClick={handleCartClick}
-          >
-            <ShoppingCart size={32} fill={inCart ? 'black' : 'white'} />
-          </button>
+        <div className="product-price">
+          <div className='price'>${product.price}</div>
+          <div className='rating'>
+            <span>{product.rating}</span>
+            <i><Star size={18} fill='gold' /></i>
+          </div>
         </div>
       </div>
-    </Link>
+      <div className='product-amount'>
+        <button onClick={() => handleAmountChange(amount - 1)}>
+          <Minus size={24} />
+        </button>
+        <input
+          type="number"
+          name="amount"
+          id="amount"
+          onChange={(e) => handleAmountChange(+e.target.value)}
+          value={amount}
+          min={0} />
+        <button onClick={() => handleAmountChange(amount + 1)}><Plus size={24} /></button>
+
+      </div>
+      <div className='product-options'>
+        <ul className="product-tags">
+          {product.tags.map(tag => {
+            return <Tag key={tag} tag={tag} />
+          })}
+        </ul>
+        <button
+          className='cart-btn'
+          onClick={handleCartClick}
+        >
+          <ShoppingCart size={32} fill={inCart ? 'black' : 'white'} />
+        </button>
+      </div>
+    </div>
   )
 }
 
