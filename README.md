@@ -13,6 +13,8 @@ A Shopping cart mock made in react and react router.
 ## Roadmap
 
 - [ ] Add Search functionality
+- [ ] Add to cart on product page
+- [ ] Add smooth loading indicators
 
 ## TODO
 

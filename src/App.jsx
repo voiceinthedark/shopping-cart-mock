@@ -8,6 +8,8 @@ import CategoryHome from './components/categories/CategoryHome'
 import Category from './components/categories/Category'
 import CartHome from './components/cart/CartHome'
 import Product from './components/products/Product'
+import { Suspense } from 'react'
+import LoadingIndicator from './components/ui/LoadingIndicator'
 
 function App() {
 
@@ -77,8 +79,10 @@ function App() {
   ])
 
   return (
-    <RouterProvider router={routes}>
-    </RouterProvider>
+    <Suspense fallback={<LoadingIndicator />}>
+      <RouterProvider router={routes}>
+      </RouterProvider>
+    </Suspense>
   )
 }
 

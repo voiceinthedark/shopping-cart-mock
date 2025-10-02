@@ -29,11 +29,14 @@ const Product = () => {
           <p className="description">{data.description}</p>
           <span className="discount">-{data.discountPercentage}%</span>
         </div>
+        <div className="info-stock">
+          <p>Items in stock {data.stock}</p>
+        </div>
         <div className="info-product">
-          <h2>{`Price $${data.price}`}</h2>
-          <h2>{`Stock ${data.stock}`}</h2>
+          <p>{`Price $${data.price}`}</p>
+          <p>{`Stock ${data.stock}`}</p>
           <div className="info-rating">
-            <h2>{`Ratings ${data.rating}`} </h2>
+            <p>{`Ratings ${data.rating}`} </p>
             <Star size={28} fill="gold" />
           </div>
 
@@ -46,7 +49,7 @@ const Product = () => {
           return (
             <>
               <hr className="seperator" />
-              <ProductReview review={review} />
+              <ProductReview key={review.date} review={review} />
             </>
           )
         })}
